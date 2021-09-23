@@ -1,46 +1,23 @@
 import React, { Component } from 'react';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import { characters } from '../characters';
-import Shippuden from '../img/naruto-shippuden.png';
-import Scroll from '../components/Scroll';
-import ErrorBoundry from '../components/ErrorBoundry';
 
-class App extends Component {
-	constructor() {
-		super();
+class ErrorBoundry extends Component {
+	constructor(props) {
+		super(props);
 		this.state = {
-			characters: [],
-			searchfield: '',
+			hasError: false,
 		};
 	}
 
-	componentDidMount() {
-		this.setState({ characters: characters });
+	componentDidCatch(error, info) {
+		this.setState({ hasError: true });
 	}
 
-	onSearchChange = (event) => {
-		this.setState({ searchfield: event.target.value });
-	};
 	render() {
-		const { characters, searchfield } = this.state;
-		const filteredCharacters = characters.filter((character) => {
-			return character.name.toLowerCase().includes(searchfield.toLowerCase());
-		});
-		return !characters.length ? (
-			<h1 className='tc'>Loading...</h1>
-		) : (
-			<div className='tc'>
-				<img src={Shippuden} alt='' weight='200' height='103' />
-				<SearchBox searchChange={this.onSearchChange} />
-				<Scroll>
-					<ErrorBoundry>
-						<CardList characters={filteredCharacters} />
-					</ErrorBoundry>
-				</Scroll>
-			</div>
-		);
+		if (this.state.hasError) {
+			return <h1>Ooops. Something went wrong.</h1>;
+		}
+		return this.props.children;
 	}
 }
 
-export default App;
+export default ErrorBoundry;
