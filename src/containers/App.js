@@ -37,6 +37,12 @@ class App extends Component {
 					<ErrorBoundry>
 						<CardList characters={filteredCharacters} />
 					</ErrorBoundry>
+					<div className='tc bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5'>
+						<p>
+							Ⓒ 2022 - Naruto Anime Characters - Build with React by Daniel
+							Daréus of Santa Barbara Production
+						</p>
+					</div>
 				</Scroll>
 			</div>
 		);
