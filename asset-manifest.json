@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/naruto-characters-search-engine/static/css/main.97cdbe6c.css",
+    "main.js": "/naruto-characters-search-engine/static/js/main.cdb17ef7.js",
+    "static/js/787.0c72df7f.chunk.js": "/naruto-characters-search-engine/static/js/787.0c72df7f.chunk.js",
+    "static/media/naruto-shippuden.png": "/naruto-characters-search-engine/static/media/naruto-shippuden.199959b4b251ad9b1f29.png",
+    "static/media/hamura-otsutsuki.jpg": "/naruto-characters-search-engine/static/media/hamura-otsutsuki.56bf74e89056de5b86a5.jpg",
+    "index.html": "/naruto-characters-search-engine/index.html",
+    "main.97cdbe6c.css.map": "/naruto-characters-search-engine/static/css/main.97cdbe6c.css.map",
+    "main.cdb17ef7.js.map": "/naruto-characters-search-engine/static/js/main.cdb17ef7.js.map",
+    "787.0c72df7f.chunk.js.map": "/naruto-characters-search-engine/static/js/787.0c72df7f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97cdbe6c.css",
+    "static/js/main.cdb17ef7.js"
+  ]
+}
